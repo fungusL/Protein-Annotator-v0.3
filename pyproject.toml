@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "protein-annotator"
+version = "0.3.0"
+description = "A multi-evidence protein functional annotation workflow based on DIAMOND, eggNOG-mapper, and Pfam/HMMER."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Protein Annotator Developers"}
+]
+keywords = [
+    "protein annotation",
+    "functional annotation",
+    "DIAMOND",
+    "eggNOG-mapper",
+    "Pfam",
+    "HMMER",
+    "bioinformatics"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: Scientific/Engineering :: Bio-Informatics"
+]
+dependencies = []
+
+[project.scripts]
+protein-annotate = "protein_annotator.cli:main"
+protein-add-source-annotation = "protein_annotator.source_annotation:main"
+protein-annotate-simple = "protein_annotator.simple_run:main"
+
+[tool.setuptools.packages.find]
+include = ["protein_annotator*"]

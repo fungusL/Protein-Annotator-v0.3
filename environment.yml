@@ -1,0 +1,10 @@
+name: protein_anno
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - python>=3.8
+  - diamond
+  - eggnog-mapper
+  - hmmer
+  - pip
